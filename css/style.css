@@ -1,0 +1,128 @@
+/*
+Colors used:
+Primary Color 500: #B58D56;
+Primary Color 400: #605E5C;
+Secondary Color 500: #33312F;
+Secondary Color 400: #F5F4EB;
+Secondary Color 50: #FFFFFF;
+Accent Color: #00802D
+*/
+
+body {
+    background-color: #F5F4EB;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    /* Sets the font size to 16px */
+    font-weight: 300;
+    /* Sets the font weight to 300 */
+    line-height: 1.6;
+    /* Sets the line-height to 1.6 * the font-size */
+    color: #33312F;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 2.0em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.35em;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    font-weight: bold;
+}
+
+a {
+    color: #00802D;
+    text-decoration: none;
+    /* No underlining */
+}
+
+a:hover {
+    color: #007128;
+    text-decoration: underline;
+    /* Underlining when hovering over a link */
+}
+
+a:visited {
+    /* visited link */
+    color: #039737;
+}
+
+a:active {
+    /* selected link */
+    color: #994c30;
+}
+
+.button {
+    display: inline-block;
+    /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+    background-color: #00802D;
+    color: #ffffff !important;
+    /* needed to override the default link color */
+    font-weight: 400;
+    padding: 12px;
+    border-radius: 8px;
+    transition: 0.2s opacity;
+}
+
+.button:hover {
+    opacity: 0.8;
+    /* Reduces the opacity of the button to 80% */
+    text-decoration: none;
+}
+
+.button.contact {
+    background-color: transparent;
+    color: #00802D !important;
+    text-transform: uppercase;
+    border: 2px solid #00802D;
+}
+
+.button.contact:hover {
+    background-color: #00802D;
+    color: #ffffff !important;
+}
+
+.button.CV {
+    background-color: #00802d;
+    color: #FFFFFF !important;
+    padding-left: 20px;
+    /* Increase left padding */
+    padding-right: 20px;
+    /* Increase right padding */
+    text-transform: capitalize;
+    border: 2px solid #00802D;
+}
+
+.button.CV:hover {
+    background-color: #00802D;
+    color: #ffffff !important;
+    padding-left: 20px;
+    /* Increase left padding */
+    padding-right: 20px;
+    /* Increase right padding */
+}
