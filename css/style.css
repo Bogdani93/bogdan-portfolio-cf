@@ -8,6 +8,73 @@ Secondary Color 50: #FFFFFF;
 Accent Color: #00802D
 */
 
+* {
+    box-sizing: border-box;
+}
+
+/* Layout styling */
+.container {
+    padding: 0 15px;
+}
+.container iframe {
+    width: 100%; /* Make the iframe span the full width */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.row {
+    margin: 25px 0;
+    /* 25px top and bottom, 0 left and right */
+}
+
+#work .row {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+.center {
+    text-align: center;
+}
+
+header {
+    background-color: #F5F4EB;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+}
+main {
+    padding-top: 148.94px;
+  }
+  .onesite main {
+    padding-top: 0; /* No padding for onesite page */
+}
+nav>ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav>ul>li {
+    display: inline-block;
+}
+
+nav>ul>li>a {
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #4a4a4a;
+}
+
+.logo {
+    max-width: 250px;
+}
+
+#hero {
+    background-color: #ffe4c4;
+    padding: 20px 0;
+    display: inline-block;
+    width: 100%;
+  }
+
 body {
     background-color: #F5F4EB;
     font-family: 'Raleway', sans-serif;
@@ -125,4 +192,11 @@ a:active {
     /* Increase left padding */
     padding-right: 20px;
     /* Increase right padding */
+}
+.box-shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    padding-bottom:10px;
+}
+.linkedin-icon {
+    padding-top: 16px; /* Add top padding to create space between the email link and the LinkedIn icon */
 }
