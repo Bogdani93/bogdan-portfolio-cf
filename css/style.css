@@ -16,11 +16,17 @@ Accent Color: #00802D
 .container {
     padding: 0 15px;
 }
+
 .container iframe {
-    width: 100%; /* Make the iframe span the full width */
+    width: 100%;
+    /* Make the iframe span the full width */
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
-
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 .row {
     margin: 25px 0;
     /* 25px top and bottom, 0 left and right */
@@ -35,19 +41,65 @@ Accent Color: #00802D
     text-align: center;
 }
 
-header {
-    background-color: #F5F4EB;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
+[class*="col-"] {
+    float: left;
 }
+
+#hero {
+    background-color: #F5F4EB;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center; /* Center the text */
+}
+#getintouch {
+    background-color: #F5F4EB;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center; /* Center the text */
+}
+#about {
+    background-color: #F5F4EB;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center; /* Center the text */
+}
+#mystory {
+    background-color: #F5F4EB;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center; /* Center the text */
+}
+#skillsandtools {
+    background-color: #F5F4EB;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center; /* Center the text */
+}
+#mywork {
+    background-color: #F5F4EB;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center; /* Center the text */
+}
+
+#hero h1,
+#hero p {
+    margin: 0; /* Remove default margin */
+}
+
+#hero span {
+    display: block; /* Start on a new line */
+}
+
 main {
     padding-top: 148.94px;
-  }
-  .onesite main {
-    padding-top: 0; /* No padding for onesite page */
 }
+
+.onesite main {
+    padding-top: 0;
+    /* No padding for onesite page */
+}
+
 nav>ul {
     list-style-type: none;
     padding: 0;
@@ -67,13 +119,23 @@ nav>ul>li>a {
 .logo {
     max-width: 250px;
 }
+.col-md-6 {
+    display: flex; /* Use flexbox to align items */
+}
 
-#hero {
-    background-color: #ffe4c4;
-    padding: 20px 0;
-    display: inline-block;
-    width: 100%;
-  }
+.content-wrapper {
+    display: flex;
+    align-items: center; /* Vertically align items */
+}
+
+.image-wrapper {
+    width: 100%; /* Set the width to 100% to fill the column */
+    padding-right: 20px; /* Add spacing between image and text */
+}
+
+.text-wrapper {
+    flex: 1; /* Let text wrapper fill remaining space */
+}
 
 body {
     background-color: #F5F4EB;
@@ -116,6 +178,8 @@ h4 {
 
 img {
     width: 100%;
+max-width: 100%;
+height: auto;
 }
 
 a {
@@ -130,7 +194,7 @@ a {
 
 a:hover {
     color: #007128;
-    text-decoration: underline;
+    text-decoration: none;
     /* Underlining when hovering over a link */
 }
 
@@ -151,15 +215,16 @@ a:active {
     color: #ffffff !important;
     /* needed to override the default link color */
     font-weight: 400;
-    padding: 12px;
-    border-radius: 8px;
-    transition: 0.2s opacity;
+    text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #00802D;
+  transition-duration: 0.2s;
+  transition-property: 0.2s opacity;
 }
 
 .button:hover {
     opacity: 0.8;
-    /* Reduces the opacity of the button to 80% */
-    text-decoration: none;
 }
 
 .button.contact {
@@ -175,28 +240,197 @@ a:active {
 }
 
 .button.CV {
-    background-color: #00802d;
-    color: #FFFFFF !important;
-    padding-left: 20px;
-    /* Increase left padding */
-    padding-right: 20px;
-    /* Increase right padding */
+    background-color: transparent;
+    /* Transparent background */
+    color: #00802d !important;
+    /* Text color */
     text-transform: capitalize;
     border: 2px solid #00802D;
+    /* Green border */
 }
 
 .button.CV:hover {
     background-color: #00802D;
     color: #ffffff !important;
-    padding-left: 20px;
-    /* Increase left padding */
-    padding-right: 20px;
-    /* Increase right padding */
 }
+
 .box-shadow {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
-    padding-bottom:10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add box shadow */
+    padding-top: 10px;
+    padding-bottom: 0px;
 }
+
 .linkedin-icon {
-    padding-top: 16px; /* Add top padding to create space between the email link and the LinkedIn icon */
+    padding-top: 16px;
+    /* Add top padding to create space between the email link and the LinkedIn icon */
+}
+
+footer#contact {
+    text-align: left;
+    /* Align content to the left */
+    margin-top: 20px;
+    /* Add some top margin to create space */
+}
+.contact-message {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+    header {
+        text-align: unset;
+        padding: 20px 0 13px;
+    }
+
+    nav {
+        width: auto;
+        float: right;
+        margin-top: 4px;
+    }
+
+    body {
+        font-size: 18px;
+    }
+
+    .col-md-6 {
+        width: calc(50% - 20px);
+        margin: 0 10px;
+    }
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+    header {
+        text-align: unset;
+        padding: 20px 0 13px;
+    }
+
+    nav {
+        width: auto;
+        float: right;
+        margin-top: 4px;
+    }
+
+    body {
+        font-size: 18px;
+    }
+
+    .col-lg-7 {
+        width: calc(58.33% - 20px);
+        margin: 0 10px;
+    }
+
+    .col-lg-5 {
+        width: calc(41.6667% - 20px);
+        margin: 0 10px;
+    }
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#animated-svg {
+    animation: rotate 2s linear infinite;
+}
+@keyframes color-change {
+    from {fill: #edc655;}
+    to {fill: #f76414;}
+  }
+  @keyframes color-change {
+    0% {fill: #edc655;}
+    50% {fill: #fcffad;}
+    100% {fill: #f76414;}
+  }
+  .sun {
+    animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  @keyframes cloud-move {
+    from {transform: translate(0,50px);}
+    to {transform: translate(200px,50px);}
+  }
+  cloud-front {
+    animation-duration: 30s;
+    animation-name: cloud-move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  @keyframes cloud-move-reverse {
+    from {transform: translate(446px,48px);}
+    to {transform: translate(100px, 48px);}
+  }
+  .cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #00802D;
+    padding: 2px 0;
+    display: inline-block;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #00802D;
+    transition: width 0.3s ease;
+}
+
+nav ul li a::before {
+    top: 2px;
+}
+
+nav ul li a::after {
+    bottom: 2px;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    transform: none;
 }
