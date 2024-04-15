@@ -22,11 +22,13 @@ Accent Color: #00802D
     /* Make the iframe span the full width */
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .row::after {
     content: "";
     clear: both;
     display: table;
 }
+
 .row {
     margin: 25px 0;
     /* 25px top and bottom, 0 left and right */
@@ -49,46 +51,59 @@ Accent Color: #00802D
     background-color: #F5F4EB;
     padding: 20px 0;
     width: 100%;
-    text-align: center; /* Center the text */
+    text-align: center;
+    /* Center the text */
 }
+
 #getintouch {
     background-color: #F5F4EB;
     padding: 20px 0;
     width: 100%;
-    text-align: center; /* Center the text */
+    text-align: center;
+    /* Center the text */
 }
+
 #about {
     background-color: #F5F4EB;
     padding: 20px 0;
     width: 100%;
-    text-align: center; /* Center the text */
+    text-align: center;
+    /* Center the text */
 }
+
 #mystory {
     background-color: #F5F4EB;
     padding: 20px 0;
     width: 100%;
-    text-align: center; /* Center the text */
+    text-align: center;
+    /* Center the text */
 }
+
 #skillsandtools {
     background-color: #F5F4EB;
     padding: 20px 0;
     width: 100%;
-    text-align: center; /* Center the text */
+    text-align: center;
+    /* Center the text */
 }
+
 #mywork {
     background-color: #F5F4EB;
     padding: 20px 0;
     width: 100%;
-    text-align: center; /* Center the text */
+    text-align: center;
+    /* Center the text */
 }
 
 #hero h1,
 #hero p {
-    margin: 0; /* Remove default margin */
+    margin: 0;
+    /* Remove default margin */
 }
 
 #hero span {
-    display: block; /* Start on a new line */
+    display: block;
+    /* Start on a new line */
 }
 
 main {
@@ -119,22 +134,28 @@ nav>ul>li>a {
 .logo {
     max-width: 250px;
 }
+
 .col-md-6 {
-    display: flex; /* Use flexbox to align items */
+    display: flex;
+    /* Use flexbox to align items */
 }
 
 .content-wrapper {
     display: flex;
-    align-items: center; /* Vertically align items */
+    align-items: center;
+    /* Vertically align items */
 }
 
 .image-wrapper {
-    width: 100%; /* Set the width to 100% to fill the column */
-    padding-right: 20px; /* Add spacing between image and text */
+    width: 100%;
+    /* Set the width to 100% to fill the column */
+    padding-right: 20px;
+    /* Add spacing between image and text */
 }
 
 .text-wrapper {
-    flex: 1; /* Let text wrapper fill remaining space */
+    flex: 1;
+    /* Let text wrapper fill remaining space */
 }
 
 body {
@@ -178,8 +199,8 @@ h4 {
 
 img {
     width: 100%;
-max-width: 100%;
-height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 a {
@@ -216,11 +237,11 @@ a:active {
     /* needed to override the default link color */
     font-weight: 400;
     text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid #00802D;
-  transition-duration: 0.2s;
-  transition-property: 0.2s opacity;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid #00802D;
+    transition-duration: 0.2s;
+    transition-property: 0.2s opacity;
 }
 
 .button:hover {
@@ -272,8 +293,10 @@ footer#contact {
     margin-top: 20px;
     /* Add some top margin to create space */
 }
+
 .contact-message {
-    margin-bottom: 20px; /* Adjust the value as needed */
+    margin-bottom: 20px;
+    /* Adjust the value as needed */
 }
 
 /* ==============================
@@ -339,54 +362,88 @@ X-large devices (1440px or larger)
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
-      }
+    }
 }
+
 @keyframes rotate {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
 }
+
 #animated-svg {
     animation: rotate 2s linear infinite;
 }
+
 @keyframes color-change {
-    from {fill: #edc655;}
-    to {fill: #f76414;}
-  }
-  @keyframes color-change {
-    0% {fill: #edc655;}
-    50% {fill: #fcffad;}
-    100% {fill: #f76414;}
-  }
-  .sun {
+    from {
+        fill: #edc655;
+    }
+
+    to {
+        fill: #f76414;
+    }
+}
+
+@keyframes color-change {
+    0% {
+        fill: #edc655;
+    }
+
+    50% {
+        fill: #fcffad;
+    }
+
+    100% {
+        fill: #f76414;
+    }
+}
+
+.sun {
     animation-duration: 4s;
     animation-name: color-change;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
-  }
-  @keyframes cloud-move {
-    from {transform: translate(0,50px);}
-    to {transform: translate(200px,50px);}
-  }
-  cloud-front {
+}
+
+@keyframes cloud-move {
+    from {
+        transform: translate(0, 50px);
+    }
+
+    to {
+        transform: translate(200px, 50px);
+    }
+}
+
+cloud-front {
     animation-duration: 30s;
     animation-name: cloud-move;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
-  }
-  @keyframes cloud-move-reverse {
-    from {transform: translate(446px,48px);}
-    to {transform: translate(100px, 48px);}
-  }
-  .cloud-back {
+}
+
+@keyframes cloud-move-reverse {
+    from {
+        transform: translate(446px, 48px);
+    }
+
+    to {
+        transform: translate(100px, 48px);
+    }
+}
+
+.cloud-back {
     animation: 34s cloud-move-reverse infinite alternate linear;
-  }
-  nav ul {
+}
+
+nav ul {
     list-style-type: none;
     padding: 0;
 }
@@ -433,4 +490,44 @@ nav ul li a:hover::after {
     width: 100%;
     left: 0;
     transform: none;
+}
+.navbar {
+    width: 100%;
+    /* Take up the full width of the viewport */
+    position: fixed;
+    /* Fixed positioning */
+    top: 0;
+    /* Position at the top of the viewport */
+    left: 0;
+    /* Position from the left edge of the viewport */
+    background: #F5F4EB;
+    padding: 20px;
+    display: flex;
+    /* Use flexbox to horizontally align navigation items */
+    justify-content: center;
+    /* Align items to the right */
+    align-items: center;
+    /* Vertically center items */
+}
+
+.navbar a {
+    margin-left: 40px;
+    /* Add spacing between navigation items */
+    text-decoration: none;
+    color: #00802D;
+    /* Adjust color as needed */
+    display: inline-block;
+    /* Display anchor elements as blocks */
+}
+
+.navbar a:hover {
+    color: #007128; /* Hover color */
+}
+
+.navbar a:visited {
+    color: #039737; /* Focus color */
+}
+
+.navbar a:active {
+    color: #994c30; /* Active (clicked) color */
 }
