@@ -356,14 +356,31 @@ Medium devices (640px and larger)
         display: none;
       }
       nav ul li a::before,
-    nav ul li a::after {
-        width: 0;
-    }
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #00802D;
+    transition: width 0.3s ease;
+}
 
-    nav ul li a:hover::before,
-    nav ul li a:hover::after {
-        width: 0;
-    }
+nav ul li a::before {
+    top: 2px;
+}
+
+nav ul li a::after {
+    bottom: 2px;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    transform: none;
+}
 }
 
 
@@ -510,33 +527,6 @@ nav ul li a {
     display: inline-block;
 }
 
-nav ul li a::before,
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background-color: #00802D;
-    transition: width 0.3s ease;
-}
-
-nav ul li a::before {
-    top: 2px;
-}
-
-nav ul li a::after {
-    bottom: 2px;
-}
-
-nav ul li a:hover::before,
-nav ul li a:hover::after {
-    width: 100%;
-    left: 0;
-    transform: none;
-}
-
 .navbar {
     width: 100%;
     /* Take up the full width of the viewport */
@@ -568,5 +558,4 @@ nav ul li a:hover::after {
 .navbar a:active {
     color: #994c30; /* Active (clicked) color */
 }
-
 
